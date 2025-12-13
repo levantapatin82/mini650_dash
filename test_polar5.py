@@ -166,7 +166,7 @@ with col_polar:
 
 with col_title:
     st.title("Classe Mini Performance")
-st.write("This dashboard visualizes performance data for minitransat boats. These data represent real-world race performance: they are extrapolated from publicly available geolocation data from minitransat races. Boat speed is computed based on location differences between each time-stamped position report while wind speed and direction are fetched from open-meteo archived data (https://open-meteo.com/). Since they are based on real-world data rather than on-the-water sailing tests, for condition, data are incomplete due to lack of data across some wind speeds and points of sail.")
+st.write("This dashboard visualizes performance data for minitransat boats. These data represent real-world race performance: they are extrapolated from publicly available geolocation data from minitransat races. Boat speed is computed based on location differences between each time-stamped position report while wind speed and direction are fetched from open-meteo archived data (https://open-meteo.com/). Since they are based on real-world data rather than on-the-water sailing tests, for some wind speeds and points of sail data is not available.")
 
 # ------------------------------
 # STANDARD PLOT SETTINGS
