@@ -172,10 +172,10 @@ st.write("This dashboard visualizes performance data for minitransat boats. Thes
 # STANDARD PLOT SETTINGS
 # ------------------------------
 PLOT_STYLE = {
-    "rows": 2,
-    "cols": 3,
-    "horizontal_spacing": 0.1,
-    "vertical_spacing": 0.01,
+    "rows": 3,
+    "cols": 2,
+    "horizontal_spacing": 0.01,
+    "vertical_spacing": 0.12,
     "subplot_titles_font_size": 12,
     "line_width_boat_type": 2,
     "line_width_sail": 3,
@@ -229,7 +229,7 @@ with tab1:
 
         for ann in fig['layout']['annotations']:
             ann['font'] = dict(size=PLOT_STYLE["subplot_titles_font_size"])
-            ann['y'] += 0.001
+            ann['y'] += 0.04
 
         max_speed = 0
         for bt in boat_types:
@@ -293,7 +293,7 @@ with tab1:
 
         for ann in fig['layout']['annotations']:
             ann['font'] = dict(size=PLOT_STYLE["subplot_titles_font_size"])
-            ann['y'] += 0.001
+            ann['y'] += 0.04
 
         max_speed = 0
         for bt in boat_types:
@@ -396,7 +396,7 @@ with tab2:
 
         for ann in fig.layout.annotations:
             ann.font.size = PLOT_STYLE["subplot_titles_font_size"]
-            ann.y += 0.001
+            ann.y += 0.04
 
         max_speed = 0
 
