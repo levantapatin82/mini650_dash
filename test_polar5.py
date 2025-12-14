@@ -378,7 +378,7 @@ with tab2:
     # --------------------------------------------------
     # Generate polar plot button
     # --------------------------------------------------
-    if st.button("Generate polar plot"):
+    if st.button("Generate polars"):
         st.session_state.show_polar_tab2 = True
 
     # --------------------------------------------------
@@ -495,7 +495,7 @@ with tab2:
     leg_options = np.sort(df_sail["leg"].dropna().unique())
     selected_leg = st.selectbox("Select Leg", leg_options)
 
-    if st.button("Generate route"):
+    if st.button("Generate route & speed profile"):
         df_route = df_sail[df_sail["edition"] == selected_edition]
 
         fig_map = px.scatter_geo(
