@@ -205,7 +205,7 @@ with tab1:
     dfin = df[df["kind"] == selected_kind]
 
     st.dataframe(
-        dfin.groupby(["boat type", "edition"])["boat name"].nunique().reset_index(name="number of boats"),
+        dfin.groupby(["boat type", "edition"])["boat_id"].nunique().reset_index(name="number of boats"),
         height=350, width=300
     )
 
@@ -234,7 +234,7 @@ with tab1:
         max_speed = 0
         for bt in boat_types:
             df_bt = df_avg_dict[bt]
-            nboats = len(dfin.loc[dfin['boat type']==bt, 'boat name'].unique())
+            nboats = len(dfin.loc[dfin['boat type']==bt, 'boat_id'].unique())
             for i, wb in enumerate(wind_bins):
                 sub = df_bt[df_bt["wind_bin"]==wb].sort_values("TWA")
                 if sub.empty:
@@ -298,7 +298,7 @@ with tab1:
         max_speed = 0
         for bt in boat_types:
             df_bt = df_avg_dict[bt]
-            nboats = len(dfin.loc[dfin['boat type']==bt, 'boat name'].unique())
+            nboats = len(dfin.loc[dfin['boat type']==bt, 'boat_id'].unique())
             for i, wb in enumerate(wind_bins):
                 sub = df_bt[df_bt["wind_bin"]==wb].sort_values("TWA")
                 if sub.empty:
