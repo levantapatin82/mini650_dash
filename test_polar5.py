@@ -274,7 +274,7 @@ with tab1:
             )
 
         fig.update_layout(
-            height=700, width=1300,
+            height=700, width=500,
             title_text=f"Polar comparison for {selected_kind}. Median performance",
             showlegend=True,
             legend=dict(orientation="v", x=1.05, y=0.6, font=dict(size=10))
@@ -338,7 +338,7 @@ with tab1:
             )
 
         fig.update_layout(
-            height=700, width=900,
+            height=700, width=500,
             title_text=f"Polar comparison for {selected_kind}. Higher performance (90th percentile)",
             showlegend=True,
             legend=dict(orientation="v", x=1.05, y=0.6, font=dict(size=10))
