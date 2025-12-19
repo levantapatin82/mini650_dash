@@ -157,6 +157,11 @@ def load_data():
     return pd.read_csv("processedAll_dfZero45.csv")
 
 df = load_data()
+df1=df.copy()
+df2=df.copy()
+df2['TWA']=df2['TWA']*-1
+
+df = pd.concat([df1, df2], ignore_index=True)
 col_logo, col_title, col_polar = st.columns([1, 6,1.5])
 
 with col_logo:
