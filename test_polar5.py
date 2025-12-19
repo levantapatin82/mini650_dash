@@ -5,7 +5,7 @@ import plotly.subplots as sp
 import numpy as np
 import plotly.express as px
 
-#st.set_page_config(layout="wide")  # full-width mode
+st.set_page_config(layout="wide")  # full-width mode
 st.set_page_config()  # full-width mode
 
 # ------------------------------
@@ -177,8 +177,8 @@ st.write("This dashboard visualizes performance data for minitransat boats. Thes
 # STANDARD PLOT SETTINGS
 # ------------------------------
 PLOT_STYLE = {
-    "rows": 3,
-    "cols": 2,
+    "rows": 2,
+    "cols": 3,
     "horizontal_spacing": 0.01,
     "vertical_spacing": 0.12,
     "subplot_titles_font_size": 12,
