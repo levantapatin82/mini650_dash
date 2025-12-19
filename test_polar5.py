@@ -211,7 +211,7 @@ with tab1:
 
     st.dataframe(
         dfin.groupby(["boat type", "edition"])["boat_id"].nunique().reset_index(name="number of boats"),
-        height=350, width=300
+        height=350, width=400
     )
 
     if st.button("Generate polar plots", key="plot_tab1"):
