@@ -11,7 +11,7 @@ st.set_page_config()  # full-width mode
 # ------------------------------
 # HELPER FUNCTION
 # ------------------------------
-def smooth_for_polar(dfin, AngleStep=20, smooth=True, percentile=None):
+def smooth_for_polar(dfin, AngleStep=10, smooth=True, percentile=None):
     df_avg = dfin.copy()
     
     # Round TWA to nearest AngleStep
