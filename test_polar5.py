@@ -275,7 +275,7 @@ with tab1:
 
         fig.update_layout(
             height=700, width=500,
-            title_text=f"Polar comparison for {selected_kind}. Median performance",
+            title_text=f"Comparison for {selected_kind}. Median performance",
             showlegend=True,
             legend=dict(orientation="v", x=1.05, y=0.6, font=dict(size=10))
         )
@@ -288,8 +288,12 @@ with tab1:
 
         df_avg_dict = {bt: smooth_for_polar(dfin[dfin["boat type"]==bt], smooth=smooth1,percentile=90) for bt in boat_types}
 
+        #colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
+        #          "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
         colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
-                  "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"]
+                    "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
+                    "#aec7e8", "#ffbb78", "#98df8a", "#ff9896", "#c5b0d5",
+                    "#c49c94", "#f7b6d2", "#dbdb8d", "#9edae5", "#393b79"]
         color_map = {bt: colors[i % len(colors)] for i, bt in enumerate(boat_types)}
 
         fig = sp.make_subplots(
@@ -339,7 +343,7 @@ with tab1:
 
         fig.update_layout(
             height=700, width=500,
-            title_text=f"Polar comparison for {selected_kind}. Higher performance (90th percentile)",
+            title_text=f"Comparison for {selected_kind}. Higher performance (90th percentile)",
             showlegend=True,
             legend=dict(orientation="v", x=1.05, y=0.6, font=dict(size=10))
         )
@@ -484,7 +488,7 @@ with tab2:
         fig.update_layout(
             height=700,
             width=1300,
-            title=f"Polar comparison: Sail {selected_sail} vs {boat_type}",
+            title=f"Comparison: Sail {selected_sail} vs {boat_type}",
             legend=dict(x=1.05, y=0.6, font=dict(size=10)),
         )
 
